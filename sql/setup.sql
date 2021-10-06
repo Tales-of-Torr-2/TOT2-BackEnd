@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -8,5 +8,5 @@ CREATE TABLE users (
   held_gear JSON[],
   items JSON[],
   achievements TEXT[],
-  location INT,
+  location INT
 );

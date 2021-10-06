@@ -1,7 +1,7 @@
-import pool, { end } from '../lib/utils/pool.js';
-import setup from '../data/setup.js';
-import request from 'supertest';
-import app from '../lib/app.js';
+const pool = require('../lib/utils/pool.js');
+const setup = require('../data/setup.js');
+const request = require('supertest');
+const app = require('../lib/app.js');
 
 describe('TOT2-BackEnd routes', () => {
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe('TOT2-BackEnd routes', () => {
   });
 
   afterAll(() => {
-    end();
+    pool.end();
   });
 
   it('creates a user via POST', async () => {
@@ -32,13 +32,13 @@ describe('TOT2-BackEnd routes', () => {
       ac: 0,
       spd: 0,
       atk: 0,
-    }; 
+    };
 
     itemObject = {
-      id: 1, 
-      name: 'item', 
-      effect: 'function', 
-    }
+      id: 1,
+      name: 'item',
+      effect: 'function',
+    };
 
     const userObject = {
       googleId: 'googleid',
@@ -50,11 +50,11 @@ describe('TOT2-BackEnd routes', () => {
       location: 1,
     };
 
-    const res = await request(app).post('/api/v1/users').send(userObject); 
+    const res = await request(app).post('/api/v1/users').send(userObject);
 
     expect(res.body).toEqual({
-      id: '1', 
-      ...userObject, 
-    })
+      id: '1',
+      ...userObject,
+    });
   });
 });
