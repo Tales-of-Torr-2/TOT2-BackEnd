@@ -41,10 +41,10 @@ describe('TOT2-BackEnd routes', () => {
     }
 
     const userObject = {
-      google_id: 'googleid',
+      googleId: 'googleid',
       score: 0,
-      hero_stats: heroOject,
-      held_gear: [heldGearObject],
+      heroStats: heroOject,
+      heldGear: [heldGearObject],
       items: [itemObject],
       achievements: ['string'],
       location: 1,
