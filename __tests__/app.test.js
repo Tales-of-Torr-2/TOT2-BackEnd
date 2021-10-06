@@ -45,9 +45,9 @@ describe('TOT2-BackEnd routes', () => {
       googleId: 'googleid',
       score: 0,
       heroStats: heroOject,
-      heldGear: [ heldGearObject ],
-      items: [ itemObject ],
-      achievements: [ 'string' ],
+      heldGear: [heldGearObject],
+      items: [itemObject],
+      achievements: ['string'],
       location: 1,
     };
 
@@ -91,9 +91,9 @@ describe('TOT2-BackEnd routes', () => {
       googleId: 'googleid',
       score: 0,
       heroStats: heroOject,
-      heldGear: [ heldGearObject ],
-      items: [ itemObject ],
-      achievements: [ 'string' ],
+      heldGear: [heldGearObject],
+      items: [itemObject],
+      achievements: ['string'],
       location: 1,
     };
     const user = await userModel.insert(userObject);
@@ -134,9 +134,9 @@ describe('TOT2-BackEnd routes', () => {
       googleId: 'googleid',
       score: 0,
       heroStats: heroOject,
-      heldGear: [ heldGearObject ],
-      items: [ itemObject ],
-      achievements: [ 'string' ],
+      heldGear: [heldGearObject],
+      items: [itemObject],
+      achievements: ['string'],
       location: 1,
     };
 
@@ -144,9 +144,9 @@ describe('TOT2-BackEnd routes', () => {
       googleId: 'gooogleid',
       score: 100,
       heroStats: heroOject,
-      heldGear: [ heldGearObject ],
-      items: [ itemObject ],
-      achievements: [ 'strings' ],
+      heldGear: [heldGearObject],
+      items: [itemObject],
+      achievements: ['strings'],
       location: 2,
     };
 
@@ -156,7 +156,7 @@ describe('TOT2-BackEnd routes', () => {
     const res = await request(app)
       .get('/api/v1/users');
 
-    expect(res.body).toEqual([ user1, user2 ]);
+    expect(res.body).toEqual([user1, user2]);
   });
 
   it('deletes an existing user by id via DELETE', async () => {
@@ -191,9 +191,9 @@ describe('TOT2-BackEnd routes', () => {
       googleId: 'googleid',
       score: 0,
       heroStats: heroOject,
-      heldGear: [ heldGearObject ],
-      items: [ itemObject ],
-      achievements: [ 'string' ],
+      heldGear: [heldGearObject],
+      items: [itemObject],
+      achievements: ['string'],
       location: 1,
     };
     const user = await userModel.insert(userObject);
@@ -238,14 +238,12 @@ describe('TOT2-BackEnd routes', () => {
       googleId: 'googleid',
       score: 0,
       heroStats: heroOject,
-      heldGear: [ heldGearObject ],
-      items: [ itemObject ],
-      achievements: [ 'string' ],
+      heldGear: [heldGearObject],
+      items: [itemObject],
+      achievements: ['string'],
       location: 1,
     };
     const user = await userModel.insert(userObject);
-
-    const updatedUserObject = await userModel.updateById(id, { ...userObject });
 
     const res = await request(app)
       .put(`/api/v1/users/${user.googleId}`)
@@ -254,9 +252,8 @@ describe('TOT2-BackEnd routes', () => {
       });
     
     expect(res.body).toEqual({
-      ...updatedUserObject,
-      score: 100,
-      message: 'This user has been updated.'
+      ...user,
+      score: 100
     });
   });
 });
