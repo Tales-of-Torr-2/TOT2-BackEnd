@@ -1,7 +1,7 @@
-const pool = require('../lib/utils/pool.js');
-const setup = require('../data/setup.js');
-const request = require('supertest');
-const app = require('../lib/app.js');
+import pool, { end } from '../lib/utils/pool.js';
+import setup from '../data/setup.js';
+import request from 'supertest';
+import app from '../lib/app.js';
 
 describe('TOT2-BackEnd routes', () => {
   beforeEach(() => {
@@ -9,6 +9,10 @@ describe('TOT2-BackEnd routes', () => {
   });
 
   afterAll(() => {
-    pool.end();
+    end();
+  });
+
+  it('creates a user via POST', async () => {
+    
   });
 });
