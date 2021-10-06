@@ -13,7 +13,7 @@ describe('TOT2-BackEnd routes', () => {
   });
 
   it('creates a user via POST', async () => {
-    heroOject = {
+    const heroOject = {
       hp: 5,
       stm: 5,
       ac: 5,
@@ -24,7 +24,7 @@ describe('TOT2-BackEnd routes', () => {
       xp: 5,
     };
 
-    heldGearObject = {
+    const heldGearObject = {
       id: 1,
       name: 'item',
       price: 5,
@@ -34,7 +34,7 @@ describe('TOT2-BackEnd routes', () => {
       atk: 0,
     };
 
-    itemObject = {
+    const itemObject = {
       id: 1,
       name: 'item',
       effect: 'function',
