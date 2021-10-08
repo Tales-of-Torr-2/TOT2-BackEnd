@@ -43,6 +43,7 @@ describe('TOT2-BackEnd routes', () => {
 
     const userObject = {
       googleId: 'googleid',
+      username: 'MikeO',
       score: 0,
       heroStats: heroOject,
       heldGear: [heldGearObject],
@@ -89,6 +90,7 @@ describe('TOT2-BackEnd routes', () => {
 
     const userObject = {
       googleId: 'googleid',
+      username: 'MikeO',
       score: 0,
       heroStats: heroOject,
       heldGear: [heldGearObject],
@@ -132,6 +134,7 @@ describe('TOT2-BackEnd routes', () => {
 
     const userObject1 = {
       googleId: 'googleid',
+      username: 'MikeO',
       score: 0,
       heroStats: heroOject,
       heldGear: [heldGearObject],
@@ -142,6 +145,7 @@ describe('TOT2-BackEnd routes', () => {
 
     const userObject2 = {
       googleId: 'gooogleid',
+      username: 'MikeP',
       score: 100,
       heroStats: heroOject,
       heldGear: [heldGearObject],
@@ -189,6 +193,7 @@ describe('TOT2-BackEnd routes', () => {
 
     const userObject = {
       googleId: 'googleid',
+      username: 'MikeO',
       score: 0,
       heroStats: heroOject,
       heldGear: [heldGearObject],
@@ -236,6 +241,7 @@ describe('TOT2-BackEnd routes', () => {
 
     const userObject = {
       googleId: 'googleid',
+      username: 'MikeO',
       score: 0,
       heroStats: heroOject,
       heldGear: [heldGearObject],
